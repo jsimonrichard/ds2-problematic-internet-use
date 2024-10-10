@@ -1,1 +1,1 @@
-# ds2-problematic-internet-use
+# Data Science 2 - Final Project: Children's Problematic Internet Use
