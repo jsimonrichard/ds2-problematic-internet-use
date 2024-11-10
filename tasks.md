@@ -3,7 +3,7 @@
 - Simon:
     - Time-series (data from biotracker)
     - CGAS
-    - Bio-impedence
+    - Bio-impedance
 - Chase:
     - Internet Use
     - FitnessGram
