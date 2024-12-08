@@ -108,6 +108,20 @@ We also visualized the Euclidean Norm Minus One (ENMO) feature, which is derived
   caption: [The distribution of ENMO means (calculated for each patient)]
 ) <enmo-means>
 
+=== Internet Use
+
+Participants of the CMI's examinations were asked how frequently they currently use the internet. The responses consisted of a numerical value from zero to three. zero meant an internet use of less than an hour per day, one meant use around one hour per day, two meant use around two hours per day, and three meant use over three hours per day.
+
+@intuse-distribution displays the response frequency of each value from all the participants. Roughly 46% of participants claimed to use the internet for less than one hour per day. There is an interesting spike in participants using the internet for two hours per day, over double those of just one hour. This could be from participants confused on the difference between "Less than 1h/day" and "Around 1h/day."
+
+#figure(
+  image("intuse-distribution.png"),
+  caption: [The distribution of Internet Use scores]
+) <intuse-distribution>
+
+=== FitnessGram
+
+=== Physical Activity Questionnaire
 
 == Methods and Results
 Since question 1 has already been answered, so we will move on to the second.
