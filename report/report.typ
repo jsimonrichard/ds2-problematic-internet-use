@@ -121,7 +121,20 @@ Participants of the CMI's examinations were asked how frequently they currently 
 
 === FitnessGram
 
+Many participants took part in numerous FitnessGram tests. FitnessGram measures a variety of strength, flexibility, and endurance benchmarks to ensure children are in good physical health.
+
+FitnessGram consisted of "FitnessGram Vitals" and "FitnessGram Child" tests. FitnessGram Vitals tested the muscular endurance of participants with a treadmill run. Not many of the Child Mind Institute's participants performed this test so it has been dropped from our analysis. FitnessGram Child tested for strength and flexibility with their tests in the curl up, trunk lift, grip strength, push up, and sit & reach. The distribution of performance on each test is shown in @fitnessgram-distribution
+
+Based on these scores, participants were given either a zero (Needs Improvement) or a one (Healthy Fitness Zone).
+
+#figure(
+  image("fitnessgram-distribution.png"),
+  caption: [The distribution of different tests provided by FitnessGram]
+) <fitnessgram-distribution>
+
 === Physical Activity Questionnaire
+
+
 
 == Methods and Results
 Since question 1 has already been answered, so we will move on to the second.
