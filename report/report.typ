@@ -16,7 +16,7 @@
 
 === Background Information
 
-The Child Mind Institute's Problematic Internet Use dataset, known officially as the Healthy Brain Network (HBN) dataset, is a sample of five-thousand 5-22 year olds who underwent clinical and research screenings. The goal of this dataset is to use the research findings to appropriately identify those with unhealthy internet habits. The classifier is a categorical variable called the participant's Severity Impairment Index (sii). This variable rates each participants' problematic internet use on a scale from 0 (None) to 3 (Severe).
+The Child Mind Institute's Problematic Internet Use dataset, known officially as the Healthy Brain Network (HBN) dataset, is a sample of five-thousand 5-22 year olds who underwent clinical and research screenings. The goal of this dataset is to use the research findings to appropriately identify those with unhealthy internet habits. The classifier is a categorical variable called the participant's Severity Impairment Index (sii). This variable rates each participant's problematic internet use on a scale from 0 (None) to 3 (Severe).
 
 === Dataset Description
 
@@ -40,14 +40,14 @@ Another assessment present in the dataset is the Children's Global Assessment Sc
 
 The Children's Global Assessment Scale (CGAS) is a "numeric scale used by mental health clinicians to rate the general functioning of youths under the age of 18" @child-mind-institute-problematic-internet-use. It ranges between 0 and 100, with values from 1 to 10 corresponding with "needs constant supervision" and values from 91 to 100 corresponding with "superior functioning" @ChildrensGlobalAssessment.
 
-When looking at the distribution of scores within the CMI dataset, we found a single data entry error recording a CGAS score of 999. After replacing that with `NaN`, we plotted the feature's distribution (@cgas-distribution). Based on this plot, it seems that the distribution is similar to a normal distribution, but it includes some "psuedo-quantization." That is, round numbers (multiples of 5) are recorded far more frequently than the surrounding numbers. This is unsurprising since this is a score assigned by human clinicians.
+When looking at the distribution of scores within the CMI dataset, we found a single data entry error recording a CGAS score of 999. After replacing that with `NaN`, we plotted the feature's distribution (@cgas-distribution). Based on this plot, it seems that the distribution is similar to a normal distribution, but it includes some "pseudo-quantization." That is, round numbers (multiples of 5) are recorded far more frequently than the surrounding numbers. This is unsurprising since this is a score assigned by human clinicians.
 
 #figure(
   image("./cgas-distribution.png", width: 60%),
   caption: [CGAS Distribution]
 ) <cgas-distribution>
 
-As a part of our analysis of CGAS, we tested whether the score is correlated significantly with the season during which it was recorded (question 1). Using a one-way ANOVA test, we found that there is in fact a significant correlation ($p = 0.0156$). and further pair-wise T-tests revealed that Winter was the "odd-one-out" as illustrated in @cgas-seasons.
+As a part of our analysis of CGAS, we tested whether the score is correlated significantly with the season during which it was recorded (question 1). Using a one-way ANOVA test, we found that there is in fact a significant correlation ($p = 0.0156$), and further pair-wise T-tests revealed that Winter was the "odd-one-out" as illustrated in @cgas-seasons.
 
 #figure(
   image("cgas-season-distributions.png", width: 60%),
@@ -90,7 +90,7 @@ These plots show that each of the bio-electric impedance features are skewed rig
 
 Some patients in the CMI's dataset wore fitness watches recording acceleration data and ambient light levels (which could be used as a proxy for whether the patient is inside or outside). The data collected exceeded 6GB, which made analysis quite difficult. For this reason, we did not use this data to train our final model for question 4. However, we still investigated question 2, which requires the use of this data.
 
-The distribution of lengths for which patients wore these devices is visualize by @actigraphy-lengths.
+The distribution of lengths for which patients wore these devices is visualized by @actigraphy-lengths.
 
 #figure(
   image("actigraphy-lengths.png"),
@@ -150,7 +150,7 @@ The adolescent group contained roughly 88% null values and in turn were left out
 The demographics data for this study included data on participants' age and sex, as well as the season of enrollment in the study. The feature "Basic_Demos-Sex" had categorical int values, 0 for females and 1 for males.
 These 3 features in the dataset contained no null values, needing no further cleaning and preprocessing.
 
-After EDA, it was found that the dataset includes a disportionately high number of younger participants with the mean age being 10 years old. However, participants in this dataset ranged from as young as 5 years old to as old as 22 years old. This may limit the generalizability of findings to older participants.
+After EDA, it was found that the dataset includes a disproportionately high number of younger participants with the mean age being 10 years old. However, participants in this dataset ranged from as young as 5 years old to as old as 22 years old. This may limit the generalizability of findings to older participants.
 The analysis also revealed that over 60% of partipants were males. 
 For the remaining feature, enrollment season, the analysis showed that enrollment was evenly distributed between all seasons (Spring, Summer, Fall, and Winter).
 
@@ -175,10 +175,10 @@ The figures shown below help us visualize these results.
 Physical measures are features of recorded data on height, weight, BMI (Body Mass Index), Blood Pressure (Diastolic and Systolic), Heart Rate, and Waist Circumference. The season in which these were recorded is included as well.
 
 During analysis, the Waist Circumference feature had to be removed from the dataset as it contained over 77% missing values and would impact further analysis. 
-The rest of the features contained 16% - 25%, which is low enough to keep in the dataset for analysis. After deciding to keep these features, imputation resulted in the replacement of missing values with the median of each feature, expect for season, as they are numeric and not normally distributed data.
+The rest of the features contained 16% - 25%, which is low enough to keep in the dataset for analysis. After deciding to keep these features, imputation resulted in the replacement of missing values with the median of each feature, except for season, as they are numeric and not normally distributed data.
 For season, missing values were imputed with the mode, which was Spring.
 
-After cleaning the date, exploratory analysis revealed that seasonality for physical measures were also evenly distributed and histrograms were created to visualize the distributions of all the numeric features.
+After cleaning the date, exploratory analysis revealed that seasonality for physical measures were also evenly distributed and histograms were created to visualize the distributions of all the numeric features.
 
 #figure(
   image("physical-measures-distribution.png"),
@@ -188,7 +188,7 @@ After cleaning the date, exploratory analysis revealed that seasonality for phys
 As seen in the figure above, BMI and Weight are right-skewed, further supporting that there is a high number of younger participants in the data. Surprisingly, Height appears to be normal.
 
 === Sleep Disturbance Scale 
-The Sleep Disturbance Scale captures data sleep disorders in children, using a scale to categorize them. There are a total of two features under this scale, the Total Raw Score and Total T SCore.
+The Sleep Disturbance Scale captures data sleep disorders in children, using a scale to categorize them. There are a total of two features under this scale, the Total Raw Score and Total T Score.
 The season of when this data was captured is also included and is also evenly distributed, which is consistent with other seasonality features in the dataset. 
 
 Histograms were created to show the Raw score and the Total score. 
@@ -216,7 +216,7 @@ To answer this, we found the correlation between patients' PCIAT Total Scores an
 
 To test if there was any correlation between Age and the Parent-Child Internet Addiction Test, various statistical tests were ran to analyze the relationship between PCIAT Total scores, individual PCIAT questions, and Age.
 
-To start off, indivudal PCIAT questions from 1 - 20 were imputed with the mode, as they are categorical int values (0-5) indicating the severity of the behavior. And PCIAT Total was imputed with the median. This deals with missing values in our data.
+To start off, individual PCIAT questions from 1 - 20 were imputed with the mode, as they are categorical int values (0-5) indicating the severity of the behavior. And PCIAT Total was imputed with the median. This deals with missing values in our data.
 
 #figure(
   image("pciat-age_scatterplot.png"),
@@ -229,7 +229,7 @@ At first, Pearson's Correlation seemed like the optimal test to run, but after a
 To tackle this, the Spearman's Rank Test was used to test for correlation as it did not require the data to be normally distributed. 
 
 After running the test for PCIAT Total and Age, the test yielded extremely small p-values which indicated that these 2 features did in fact have some sort of relationship. 
-The Spearman Correlation statistic indicates that there is a montonic relationship, meaning as age increases, so does the PCIAT Total score. 
+The Spearman Correlation statistic indicates that there is a monotonic relationship, meaning as age increases, so does the PCIAT Total score. 
 
 Next, as a supplement to the Spearman Rank test performed on PCIAT Total and Age, the same test was used on all individual PCIAT questions and Age. When ran, all 20 tests yielded the same result of extremely small p-values and a statistically significant monotonic relationship.
 
