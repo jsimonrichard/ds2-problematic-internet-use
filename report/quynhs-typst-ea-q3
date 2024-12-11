@@ -49,3 +49,43 @@ Histograms were created to show the Raw score and the Total score.
   image("sds-distribution.png"),
   caption: [Distribution of Sleep Disturbance Scale Raw and Total Scores]
 ) <sds-measures-distribution>
+
+
+
+
+
+=== Question 3: PCIAT / Age Correlation
+To test if there was any correlation between Age and the Parent-Child Internet Addiction Test, various statistical tests were ran to analyze the relationship between PCIAT Total scores, individual PCIAT questions, and Age.
+
+To start off, indivudal PCIAT questions from 1 - 20 were imputed with the mode, as they are categorical int values (0-5) indicating the severity of the behavior. And PCIAT Total was imputed with the median. This deals with missing values in our data.
+
+#figure(
+  image("pciat-age_scatterplot.png"),
+  caption: [Scatterplot of Age and PCIAT Total Relationship]
+) <pciat-age-scatterplot>
+
+Using the scatterplot above to visualize the relationship between Age and PCIAT Total, initially, it appears that there is no relationship between the 2 features. So, statistical tests are needed to formally establish if there is a relationship.
+
+At first, Pearson's Correlation seemed like the optimal test to run, but after attempting to verify all assumptions to run the test, it was found that the data was not normal.
+To tackle this, the Spearman's Rank Test was used to test for correlation as it did not require the data to be normally distributed. 
+
+After running the test for PCIAT Total and Age, the test yielded extremely small p-values which indicated that these 2 features did in fact have some sort of relationship. 
+The Spearman Correlation statistic indicates that there is a montonic relationship, meaning as age increases, so does the PCIAT Total score. 
+
+Next, as a supplement to the Spearman Rank test performed on PCIAT Total and Age, the same test was used on all individual PCIAT questions and Age. When ran, all 20 tests yielded the same result of extremely small p-values and a statistically significant monotonic relationship.
+
+As an extra measure to confirm if there truly was a relationship between the categorical variable - individual PCIAT questions - and Age, the Chi-Square Test was also ran. Similar to the previous results of the Spearman Rank Test, this test yielded very small p-values as well and 
+Chi-Square statistics ranging from as low as 74.201823 to as high as 739.785700, meaning some questions had a stronger relationship with age than others. The highest statistic belonged to the test ran on Question 7, which asked "How often does your child check his or her e-mail before doing something else?". 
+
+With very small p-values coming from all the tests ran, it can be concluded that PCIAT scores and questions do indeed correlate with age. 
+
+Below is the new scatterplot of the relationship between PCIAT and Age.
+
+#figure(
+  image("pciat-age_correlationLine.png"),
+  caption: [Scatterplot of Age and PCIAT Total Relationship with Trendline]
+) <pciat-age-correlation-scatterplot>
+
+
+
+
