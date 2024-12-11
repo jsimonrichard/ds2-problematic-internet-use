@@ -14,13 +14,16 @@
 
 == Introduction
 
+=== Background Information
 
+The Child Mind Institute's Problematic Internet Use dataset, known officially as the Healthy Brain Network (HBN) dataset, is a sample of five-thousand 5-22 year olds who underwent clinical and research screenings. The goal of this dataset is to use the research findings to appropriately identify those with unhealthy internet habits. The classifier is a categorical variable called the participant's Severity Impairment Index (sii). This variable rates each participants' problematic internet use on a scale from 0 (None) to 3 (Severe).
 
 === Dataset Description
 
-#red-note[
-  Include general description of dataset, PCIAT, SII, and what the generall modelling task is (do not cover individual feature columns here with the exception of CGAS; we'll cover them during the exploratory analysis).
-]
+The Severity Impairment Index is calculated using one of the assessments within the dataset. The Parent-Child Internet Addiction Test (PCIAT) is a 20-question long test taken by the parent of the participant. The questions contain information relating to internet use and problematic behavioural symptoms. Each question prompts a response of zero (Does Not Apply) through five (Always) and sums the total together for a score out of 100. This score is then divided into the four sii variables.
+
+Another assessment present in the dataset is the Children's Global Assessment Scale. This scale is used by mental health clinics to rate the general functioning of youths under 18. The rating is on a scale from 0 to 100. This feature is described in more detail in our exploratory data analysis and is used to answer the first of our questions listed below.
+
 
 
 === Questions
