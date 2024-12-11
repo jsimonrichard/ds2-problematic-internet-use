@@ -134,7 +134,14 @@ Based on these scores, participants were given either a zero (Needs Improvement)
 
 === Physical Activity Questionnaire
 
+The Physical Activity Questionnaire (PAQ) was administered to the Child Mind Institute's participants. This questionnaire asked the participants about their recent activity levels over the past seven days and returned a score from zero to five. The PAQ was split into two categories based on age named "Child" and "Adolescent" The distribution of results from this questionnaire are shown in @PAQ-distribution. The season of participation in the questionnaire was also recorded for both child and adolescent segments.
 
+#figure(
+  image("PAQ-distribution.png"),
+  caption: [Boxplot distributions for the Physical Activity Questionnaire Child and Adolescent]
+) <PAQ-distribution>
+
+The adolescent group contained roughly 88% null values and in turn were left out of the analysis.
 
 == Methods and Results
 Since question 1 has already been answered, so we will move on to the second.
