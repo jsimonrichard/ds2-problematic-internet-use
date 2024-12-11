@@ -169,6 +169,29 @@ The figures shown below help us visualize these results.
   caption: [Pie Chart for Enrollment Season Distribution]
 ) <season-distribution>
 
+=== Physical Measures
+Physical measures are features of recorded data on height, weight, BMI (Body Mass Index), Blood Pressure (Diastolic and Systolic), Heart Rate, and Waist Circumference. The season in which these were recoreded is included as well.
+During analysis, the Waist Circumference feature had to be removed from the dataset as it contained over 77% missing values and would impact further analysis. 
+The rest of the features contained 16% - 25%, which is low enough to keep in the dataset for analysis. After deciding to keep these features, imputation resulted in the replacement of missing values with the median of each feature, expect for season, as they are numeric and not normally distributed data.
+For season, missing values were imputed with the mode, which was Spring.
+After cleaning the date, exploratory analysis revealed that seasonality for physical measures were also evenly distributed and histrograms were created to visualize the distributions of all the numeric features.
+
+#figure(
+  image("physical-measures-distribution.png"),
+  caption: [Distribution of Physical Measures]
+) <physical-measures-distribution>
+
+As seen in the figure above, BMI and Weight are right-skewed, further supporting that there is a high number of younger participants in the data. Surprisingly, Height appears to be normal.
+
+=== Sleep Disturbance Scale 
+The Sleep Disturbance Scale captures data sleep disorders in children, using a scale to categorize them. There are a total of two features under this scale, the Total Raw Score and Total T SCore.
+The season of when this data was captured is also included and is also evenly distributed, which is consistent with other seaosonality features in the dataset. 
+Histograms were created to show the Raw score and the Total score. 
+
+#figure(
+  image("sds-distribution.png"),
+  caption: [Distribution of Sleep Disturbance Scale Raw and Total Scores]
+) <sds-measures-distribution>
 
 == Methods and Results
 Since question 1 has already been answered, so we will move on to the second.
