@@ -149,9 +149,11 @@ The adolescent group contained roughly 88% null values and in turn were left out
 == Demographics 
 The demographics data for this study included data on participants' age and sex, as well as the season of enrollment in the study. The feature "Basic_Demos-Sex" had categorical int values, 0 for females and 1 for males.
 These 3 features in the dataset contained no null values, needing no further cleaning and preprocessing.
+
 After EDA, it was found that the dataset includes a disportionately high number of younger participants with the mean age being 10 years old. However, participants in this dataset ranged from as young as 5 years old to as old as 22 years old. This may limit the generalizability of findings to older participants.
 The analysis also revealed that over 60% of partipants were males. 
 For the remaining feature, enrollment season, the analysis showed that enrollment was evenly distributed between all seasons (Spring, Summer, Fall, and Winter).
+
 The figures shown below help us visualize these results. 
 
 #figure(
@@ -170,10 +172,12 @@ The figures shown below help us visualize these results.
 ) <season-distribution>
 
 === Physical Measures
-Physical measures are features of recorded data on height, weight, BMI (Body Mass Index), Blood Pressure (Diastolic and Systolic), Heart Rate, and Waist Circumference. The season in which these were recoreded is included as well.
+Physical measures are features of recorded data on height, weight, BMI (Body Mass Index), Blood Pressure (Diastolic and Systolic), Heart Rate, and Waist Circumference. The season in which these were recorded is included as well.
+
 During analysis, the Waist Circumference feature had to be removed from the dataset as it contained over 77% missing values and would impact further analysis. 
 The rest of the features contained 16% - 25%, which is low enough to keep in the dataset for analysis. After deciding to keep these features, imputation resulted in the replacement of missing values with the median of each feature, expect for season, as they are numeric and not normally distributed data.
 For season, missing values were imputed with the mode, which was Spring.
+
 After cleaning the date, exploratory analysis revealed that seasonality for physical measures were also evenly distributed and histrograms were created to visualize the distributions of all the numeric features.
 
 #figure(
@@ -185,7 +189,8 @@ As seen in the figure above, BMI and Weight are right-skewed, further supporting
 
 === Sleep Disturbance Scale 
 The Sleep Disturbance Scale captures data sleep disorders in children, using a scale to categorize them. There are a total of two features under this scale, the Total Raw Score and Total T SCore.
-The season of when this data was captured is also included and is also evenly distributed, which is consistent with other seaosonality features in the dataset. 
+The season of when this data was captured is also included and is also evenly distributed, which is consistent with other seasonality features in the dataset. 
+
 Histograms were created to show the Raw score and the Total score. 
 
 #figure(
@@ -263,6 +268,8 @@ Finally, we evaluated our Logistic Regression model on the test dataset, produci
 ) <test-scores>
 
 == Conclusion
+
+The Healthy Brain Network dataset from the Child Mind Institute was able to mostly answer the four questions we proposed. We found a correlation between CGAS and the season it was administered with lower scores in the winter. We achieved an output to find out if activity scores diverges before or after PCIAT was administered, however, we would need more time to understand the output and address any errors in our calculations. We found that the PCIAT total has a positive correlation to the age of the participants. Lastly, we modelled a prediction of sii using random forest and logistic regression. We achieved a Cohen's Kappa score of 0.397 using the logistic regression model on the test dataset.
 
 == Project Code
 
