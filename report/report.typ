@@ -146,6 +146,30 @@ The Physical Activity Questionnaire (PAQ) was administered to the Child Mind Ins
 
 The adolescent group contained roughly 88% null values and in turn were left out of the analysis.
 
+== Demographics 
+The demographics data for this study included data on participants' age and sex, as well as the season of enrollment in the study. The feature "Basic_Demos-Sex" had categorical int values, 0 for females and 1 for males.
+These 3 features in the dataset contained no null values, needing no further cleaning and preprocessing.
+After EDA, it was found that the dataset includes a disportionately high number of younger participants with the mean age being 10 years old. However, participants in this dataset ranged from as young as 5 years old to as old as 22 years old. This may limit the generalizability of findings to older participants.
+The analysis also revealed that over 60% of partipants were males. 
+For the remaining feature, enrollment season, the analysis showed that enrollment was evenly distributed between all seasons (Spring, Summer, Fall, and Winter).
+The figures shown below help us visualize these results. 
+
+#figure(
+  image("demos-age.png"),
+  caption: [The distribution for Participant Age]
+) <age-distribution>
+
+#figure(
+  image("demos-sex-piechart.png"),
+  caption: [Pie Chart for Participant Sex Distribution]
+) <sex-distribution>
+
+#figure(
+  image("enrollment-season-piechart.png"),
+  caption: [Pie Chart for Enrollment Season Distribution]
+) <season-distribution>
+
+
 == Methods and Results
 Since question 1 has already been answered, so we will move on to the second.
 
